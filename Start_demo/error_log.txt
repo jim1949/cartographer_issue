@@ -1,0 +1,50 @@
+[relaybot@jmairobot ~/carto_ws]$roslaunch cartographer_ros demo_revo_lds.launch ... logging to /home/relaybot/.ros/log/f7a9e2b2-0273-11e8-a672-c85b76cbb241/roslaunch-jmairobot-5794.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://192.168.2.120:43982/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.21
+ * /use_sim_time: True
+
+NODES
+  /
+    cartographer_node (cartographer_ros/cartographer_node)
+    rviz (rviz/rviz)
+
+ROS_MASTER_URI=http://192.168.2.120:11311
+
+core service [/rosout] found
+process[cartographer_node-1]: started with pid [5812]
+[ INFO] [1516955777.863378664]: I0126 16:36:17.000000  5812 configuration_file_resolver.cc:41] Found '/home/relaybot/carto_ws/install_isolated/share/cartographer_ros/configuration_files/revo_lds.lua' for 'revo_lds.lua'.
+[ INFO] [1516955777.863659256]: I0126 16:36:17.000000  5812 configuration_file_resolver.cc:41] Found '/home/relaybot/carto_ws/install_isolated/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1516955777.863706116]: I0126 16:36:17.000000  5812 configuration_file_resolver.cc:41] Found '/home/relaybot/carto_ws/install_isolated/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1516955777.863769630]: I0126 16:36:17.000000  5812 configuration_file_resolver.cc:41] Found '/home/relaybot/carto_ws/install_isolated/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+[ INFO] [1516955777.863805766]: I0126 16:36:17.000000  5812 configuration_file_resolver.cc:41] Found '/home/relaybot/carto_ws/install_isolated/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+F0126 16:36:17.863946  5812 lua_parameter_dictionary.cc:83] Check failed: status == 0 (2 vs. 0) [string "include "map_builder.lua"..."]:49: attempt to index global 'TRAJECTORY_BUILDER_2D' (a nil value)
+[FATAL] [1516955777.864254954]: F0126 16:36:17.000000  5812 lua_parameter_dictionary.cc:83] Check failed: status == 0 (2 vs. 0) [string "include "map_builder.lua"..."]:49: attempt to index global 'TRAJECTORY_BUILDER_2D' (a nil value)
+process[rviz-2]: started with pid [5842]
+*** Check failure stack trace: ***
+    @     0x7f758b3b4daa  (unknown)
+    @     0x7f758b3b4ce4  (unknown)
+    @     0x7f758b3b46e6  (unknown)
+    @     0x7f758b3b7687  (unknown)
+    @           0x5b1696  cartographer::common::(anonymous namespace)::CheckForLuaErrors()
+    @           0x5b1c06  cartographer::common::LuaParameterDictionary::LuaParameterDictionary()
+    @           0x5b1d8d  cartographer::common::LuaParameterDictionary::LuaParameterDictionary()
+    @           0x57b7a2  cartographer_ros::LoadOptions()
+    @           0x579ac3  cartographer_ros::(anonymous namespace)::Run()
+    @           0x5772b6  main
+    @     0x7f7587b3cf45  (unknown)
+    @           0x579917  (unknown)
+    @              (nil)  (unknown)
+[cartographer_node-1] process has died [pid 5812, exit code -6, cmd /home/relaybot/carto_ws/install_isolated/lib/cartographer_ros/cartographer_node -configuration_directory /home/relaybot/carto_ws/install_isolated/share/cartographer_ros/configuration_files -configuration_basename revo_lds.lua scan:=scan __name:=cartographer_node __log:=/home/relaybot/.ros/log/f7a9e2b2-0273-11e8-a672-c85b76cbb241/cartographer_node-1.log].
+log file: /home/relaybot/.ros/log/f7a9e2b2-0273-11e8-a672-c85b76cbb241/cartographer_node-1*.log
+
+
